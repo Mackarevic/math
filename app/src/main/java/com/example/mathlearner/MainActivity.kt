@@ -1,10 +1,13 @@
 package com.example.mathlearner
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.mathlearner.Rechner.Taschenrechner
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         var result = findViewById<TextView>(R.id.result)
         var button = findViewById<MaterialButton>(R.id.check) as Button
         var newTask = findViewById<MaterialButton>(R.id.newTask) as Button
+        var latestResults = findViewById<MaterialButton>(R.id.latestResults) as Button
+        var changeView = findViewById<MaterialButton>(R.id.changeActivity) as Button
 
 
             zahl.setText("$rnds1")
@@ -34,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             val ergebniss = rnds1 + rnds2
             val validInput = Regex("\\d+")
             if (input.text.toString().isBlank() || !validInput.matches(input.text.toString())) {
-                result.set Text("Ungültige Angabe")
+                result.setText("Ungültige Angabe")
                 input.setText("")
                 return@setOnClickListener
             }
@@ -58,6 +63,14 @@ class MainActivity : AppCompatActivity() {
             zahl.setText("$rnds1")
             zahl2.setText("$rnds2")
             Toast.makeText(applicationContext, "Done !", Toast.LENGTH_SHORT).show()
+        }
+
+        latestResults.setOnClickListener{
+            Toast.makeText(applicationContext, "Corrently not working", Toast.LENGTH_SHORT).show()
+        }
+        changeView.setOnClickListener{
+            val changePage = Intent(this, Taschenrechner.kt)
+            startActivity(changePage)
         }
     }
 }
