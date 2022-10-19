@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">MathLearner</string>
+    <string name="app_name">Math Learner</string>
+
+    <string name="common_undefined">undefined</string>
+    <string name="common_regex_not_matched">Regex does not match</string>
+
+    <string name="errors_saves_file_load">Could not load the save file</string>
+    <string name="errors_saves_file_write">Could not write the save file</string>
+
+    <string name="common_in_work">This feature is currently being worked on</string>
+    <string name="common_nav_bar_here">You are currently here</string>
+
+    <string name="main_title">Hello. Can you do this Task?</string>
+    <string name="main_result_dummy">Your result will be printed out here</string>
+    <string name="main_task_new">New Task</string>
+    <string name="main_task_check">Check Task</string>
+    <string name="main_results_latest">Latest Results</string>
+
+    <string name="main_messages_new_task">New Task Generated</string>
+    
+    <string name="main_results_blank">Blank or invalid Input</string>
+    <string name="main_results_invalid">Invalid Input</string>
+    <string name="main_results_correct">Correct Result</string>
+    <string name="main_results_correct_strike" formatted="false">Correct Result (%num% Strike)</string>
+
+    <string name="navigation_bar_main">Tasks</string>
+    <string name="navigation_bar_calc">Calculator</string>
+
+    <string name="results_list_clear">Clear List</string>
+    <string name="results_long_click">Long Click to remove a single item</string>
+
+    <string name="results_list_item_correct">Correct</string>
+    <string name="results_list_item_incorrect">Incorrect</string>
+    <string name="results_list_item_blank">Blank Field</string>
+    <string name="results_list_item_new_task">New Task created</string>
+    <string name="results_list_item_dummy_numbers" translatable="false">5 + 6 = 11</string>
 </resources>

@@ -1,109 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
-
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40sp"
+        android:text="@string/main_title"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center_horizontal"
-        android:text="Hello, can you do this Task?"
-        android:textSize="20dp" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/main_text_number1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="+"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/main_text_number2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/zahl1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:background="@android:color/darker_gray"
-        android:gravity="center"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/zahl2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="100dp"
-        android:background="@android:color/darker_gray"
-        android:gravity="center"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/plus"
-        android:layout_width="match_parent"
+        android:id="@+id/main_text_result"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="180dp"
-        android:layout_toRightOf="@+id/zahl1"
-        android:text="  +" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        android:text="@string/main_result_dummy"
+        android:textColor="#fff"
+        android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/input"
+        android:id="@+id/main_user_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="350dp"
-        android:inputType="numberDecimal" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="157dp"
-        android:layout_marginTop="400dp"
-        android:text="Provjeri" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/newTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="57dp"
-        android:layout_marginTop="400dp"
-        android:text="New" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/latestResults"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="277dp"
-        android:layout_marginTop="400dp"
-        android:text="results" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/changeActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="330dp"
-        android:layout_marginTop="470dp"
-        android:text="->" />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:textColor="@color/white"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:ems="4"
         android:gravity="center"
-        android:textSize="20sp" />
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColor="#fff"
+        android:textColorHint="#565656"
+        tools:ignore="LabelFor" />
 
+    <Button
+        android:id="@+id/main_task_check"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/main_task_check"
+        android:textColor="#0FDDCD" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/main_task_new"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_task_new"
+            android:textColor="#0FDDCD" />
+
+        <Button
+            android:id="@+id/main_results_latest"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_results_latest"
+            android:textColor="#0FDDCD" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/nav_bar_activity_tasks"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/navigation_bar_main"
+            android:src="@drawable/ic_task" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/nav_bar_activity_calc"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/navigation_bar_calc"
+            android:src="@drawable/ic_calc" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
